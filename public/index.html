@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAI Chatbot</title>
+</head>
+<style>
+    body {
+        background-color: lightgray;
+    }
+</style>
+
+<body>
+    <script src="https://neru-ef3346a6-debug-nakatomi.use1.runtime.vonage.cloud/js/kaiwc.js"></script>
+    <kai-wc />
+    <h1>Sample page for WebComponent Chatbot</h1>
+    <hr>
+    <div>
+        <h2>This could be any webpage.</h2>
+        <h3>Click on the icon in the lower right corner to start...</h3>
+        <br>
+        <br>
+        <b>
+            The Vonage Knowledge AI Chatbot is added to any webpage with just TWO lines:
+            <xmp>
+                <script src="https://neru-ef3346a6-kai-kai.use1.runtime.vonage.cloud/js/kaiwc.js"></script>
+                <kai-wc />
+            </xmp>
+            <br>
+            In the backend, you can customize the bot's colors, icons, title, and of course what AI Studio Agent to use.
+            <xmp>
+                // Customization Variables:
+                const server_url = "https://neru-ef3346a6-kai-kai.use1.runtime.vonage.cloud";
+                const avatarimg = "https://www.atlasquest.com/favicon-32x32.png"; // Avatar image
+                const title = "Atlas Questions"; // Title on the bot
+                const avatarbgcolor = "#F9A825"; // Avatar's Background Color
+                const avatarmargin = "10%"; // Avatar's margin
+                const headerbgcolor = "#F9A825"; // Header background color
+                const headertitlecolor = "#FFFFFF"; // Header title color
+                const bodybgcolor = "#9dbfde"; // Body color
+                const sendbuttoncolor = "#F9A825"; // Send button color
+                const agent = "xxxxxxxxx"; // AI Studio Agent to use
+
+            </xmp>
+            You can also override these variables using the Web Component's properties (using the same property names as
+            the above
+            variables)
+            <br><br>
+            Example of overriding in the web component:
+            <xmp>
+                <kai-wc title="My FAQ" headertitlecolor="purple" />
+            </xmp>
+        </b>
+
+    </div>
+
+</body>
+
+</html>
