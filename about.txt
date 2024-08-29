@@ -1,0 +1,8 @@
+KAI stands for Knowledge AI
+VCR means Vonage Cloud Runtime
+The Chatbot is based on Vonage AI Studio's KAI component and VCR
+The chatbot is a simple to use Web component
+Web components are a set of web platform APIs that allow you to create new custom, reusable, encapsulated HTML tags to use in web pages
+The Chatbot can be added to any webpage html with just 2 lines of code
+All the chatbot logic resides in the backend, hosted by VCR
+The Chatbot is a simple to use and deply component for addin FAQ and Q&A bots to your webpage

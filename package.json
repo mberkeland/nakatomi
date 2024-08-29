@@ -1,0 +1,19 @@
+{
+  "name": "nakatomi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "nakatomi.js",
+  "scripts": {
+    "start": "node index.js",
+    "debug": "vcr debug"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vonage/server-sdk": "^3.12.2",
+    "@vonage/vcr-sdk": "^1.2.0",
+    "axios": "^1.7.2",
+    "express": "^4.18.2",
+    "wc-chatbot": "^0.1.3"
+  }
+}

@@ -1,0 +1,31 @@
+project:
+  name: kai
+instance:
+  name: kai
+  runtime: nodejs18
+  region: aws.use1
+  application-id: 75e57432-a99f-48fa-8953-156d3cb28fd5
+  environment:
+    - name: aikey
+      value: xxxxxx
+    - name: aiagent
+      value: 66cccf38ab22e6ae21cc77e0
+    - name: aiurl
+      value: https://studio-api-us.ai.vonage.com/http/
+  entrypoint:
+    - node
+    - kai.js
+debug:
+  name: kai
+  application-id: 75e57432-a99f-48fa-8953-156d3cb28fd5
+  environment:
+    - name: aikey
+      value: xxxxxx
+    - name: aiagent
+      value: 66cccf38ab22e6ae21cc77e0
+    - name: aiurl
+      value: https://studio-api-us.ai.vonage.com/http/
+  entrypoint:
+    - nodemon
+    - --inspect
+    - kai.js
