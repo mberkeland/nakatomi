@@ -14,7 +14,7 @@ instance:
       value: https://studio-api-us.ai.vonage.com/http/
   entrypoint:
     - node
-    - kai.js
+    - nakatomi.js
 debug:
   name: kai
   application-id: 75e57432-a99f-48fa-8953-156d3cb28fd5
@@ -28,4 +28,4 @@ debug:
   entrypoint:
     - nodemon
     - --inspect
-    - kai.js
+    - nakatomi.js
