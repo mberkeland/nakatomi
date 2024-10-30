@@ -1,6 +1,7 @@
 const { Vonage } = require('@vonage/server-sdk');
 const express = require('express');
 const axios = require('axios');
+const fs = require("fs");
 
 const app = express();
 const port = process.env.VCR_PORT;
@@ -22,6 +23,23 @@ app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Headers", "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
     next();
 });
+
+// Create the JSON file for the WebComponent, based on YAML variables
+let vars = {
+    server_url: server_url,
+    avatarimg: process.env.avatarimg,  // Point to the Avatar image
+    title: process.env.title,  // Title on the bot
+    avatarbgcolor:process.env.avatarbgcolor,  // Avatar's Background Color
+    avatarmargin: process.env.avatarmargin,       // Avatar's margin
+    headerbgcolor: process.env.headerbgcolor,  // Header background color
+    headertitlecolor: process.env.headertitlecolor,  // Header title color
+    bodybgcolor: process.env.bodybgcolor,    // Body color
+    sendbuttoncolor: process.env.sendbuttoncolor,  //  Send button color
+    showwait: process.env.showwait,
+    agent: process.env.agent
+}
+console.log("Vars: ",vars);
+fs.writeFileSync("public/js/vars.json", JSON.stringify(vars));
 
 app.get('/_/health', async (req, res) => {
     res.sendStatus(200);
